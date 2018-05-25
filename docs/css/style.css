@@ -300,6 +300,7 @@ template {
 html,
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #162B4D;
 }
 header {
   width: 100%;
@@ -307,6 +308,7 @@ header {
   height: 96px;
 }
 section {
+  background-color: white;
   padding: 130px 30px;
 }
 @media screen and (max-width: 768px) {
