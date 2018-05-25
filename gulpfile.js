@@ -12,14 +12,14 @@ const paths = {
         html: 'src/*.html'
     },
     dist: {
-        js: 'dist/js/',
-        css: 'dist/css/',
-        html: 'dist/'
+        js: 'docs/js/',
+        css: 'docs/css/',
+        html: 'docs/'
     }
 };
 
 gulp.task('clean', () => {
-    return del('dist');
+    return del('docs');
 });
 
 gulp.task('js', () => {
