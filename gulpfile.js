@@ -3,7 +3,7 @@ const babel = require('gulp-babel');
 const del = require('del');
 const less = require('gulp-less');
 const gulpSequence = require('gulp-sequence');
-const fileinclude = require('gulp-file-include');
+const fileInclude = require('gulp-file-include');
 const injectSvg = require('gulp-inject-svg');
 
 const paths = {
@@ -22,7 +22,7 @@ const paths = {
 };
 
 gulp.task('clean', () => {
-    return del('docs');
+    return del(['docs/**/*', '!docs/CNAME']);
 });
 
 gulp.task('js', () => {
@@ -39,7 +39,7 @@ gulp.task('css', () => {
 
 gulp.task('html', () => {
     return gulp.src(paths.src.html)
-        .pipe(fileinclude())
+        .pipe(fileInclude())
         .pipe(injectSvg({
             base: 'src/'
         }))
