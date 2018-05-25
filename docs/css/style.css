@@ -397,6 +397,9 @@ section .section-wrapper .section-column .section-column__text p {
     max-width: 100%;
   }
 }
+section .section-wrapper .section-column .section-column__text p:last-child {
+  margin-bottom: 0;
+}
 section .section-wrapper .section-column .section-column__text .section-column__subtitle {
   margin-top: 50px;
   line-height: 24px;
