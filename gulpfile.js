@@ -4,17 +4,20 @@ const del = require('del');
 const less = require('gulp-less');
 const gulpSequence = require('gulp-sequence');
 const fileinclude = require('gulp-file-include');
+const injectSvg = require('gulp-inject-svg');
 
 const paths = {
     src: {
         js: 'src/js/**/*.js',
         css: 'src/css/**/*.less',
-        html: 'src/*.html'
+        html: 'src/*.html',
+        images: 'src/images/**.*'
     },
     dist: {
         js: 'docs/js/',
         css: 'docs/css/',
-        html: 'docs/'
+        html: 'docs/',
+        images: 'docs/images/'
     }
 };
 
@@ -37,11 +40,19 @@ gulp.task('css', () => {
 gulp.task('html', () => {
     return gulp.src(paths.src.html)
         .pipe(fileinclude())
+        .pipe(injectSvg({
+            base: 'src/'
+        }))
         .pipe(gulp.dest(paths.dist.html));
 });
 
-gulp.task('watch', () => {
-    gulp.watch('src/**/*.*', ['js', 'css', 'html']);
+gulp.task('images', () => {
+   return gulp.src(paths.src.images)
+       .pipe(gulp.dest(paths.dist.images));
 });
 
-gulp.task('default', gulpSequence('clean',['js', 'css', 'html']));
+gulp.task('watch', () => {
+    gulp.watch('src/**/*.*', ['js', 'css', 'html', 'images']);
+});
+
+gulp.task('default', gulpSequence('clean',['js', 'css', 'html', 'images']));

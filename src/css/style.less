@@ -1,4 +1,13 @@
 @import (less) 'includes/normalize.css';
+@import 'includes/variables.less';
+
+html, body {
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+
+}
 
 header {
   width: 100%;
@@ -7,5 +16,113 @@ header {
 }
 
 section {
-  padding: 130px 0;
+  padding: 130px 30px;
+  .section-wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .section-column {
+      width: 50%;
+      flex: 1 1 auto;
+      box-sizing: border-box;
+      &.column--left {
+        padding-right: 15px;
+      }
+      &.column--right {
+        padding-left: 115px;
+      }
+      .section-column__text {
+        .section-column__title {
+          font-weight: bold;
+          font-size: 36px;
+          color: @headerColor;
+          line-height: 48px;
+          margin-bottom: 30px;
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          color: @textColor;
+          line-height: 24px;
+          margin-bottom: 30px;
+        }
+        .section-column__subtitle {
+          margin-top: 50px;
+          line-height: 24px;
+          font-size: 16px;
+          color: @subtitleColor;
+        }
+        .mouse-scroll-icon {
+          margin-top: 45px;
+          margin-left: 17px;
+        }
+      }
+      .section-image {
+        width: 100%;
+      }
+    }
+  }
+
+  &.section--lead {
+    .section-wrapper {
+      .section-column {
+        &.column--left {
+          padding-right: 15px;
+        }
+        &.column--right {
+          padding-left: 15px;
+        }
+        .section-column__text {
+          .section-column__title {
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 64px;
+          }
+          p {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+            margin-bottom: 46px;
+          }
+        }
+      }
+    }
+  }
+
+  &.section--gray {
+    background-color: @sectionBg;
+  }
+
+  &.section--reserve {
+    .section-wrapper {
+      flex-direction: row-reverse;
+      .section-column {
+        &.column--left {
+          padding: 0 0 0 15px;
+        }
+        &.column--right {
+          padding: 0 115px 0 0;
+        }
+      }
+    }
+  }
+
+}
+
+button {
+  border-radius: 4px;
+  font-weight: bold;
+  line-height: 24px;
+  font-size: 16px;
+  text-align: center;
+  border: 0;
+  padding: 10px 16px;
+  min-width: 128px;
+  &.button-default {
+    background-color: @buttonColor;
+    color: @buttonText;
+    box-shadow: 0px 24px 24px rgba(0, 101, 255, 0.12);
+  }
 }

@@ -297,8 +297,104 @@ template {
 [hidden] {
   display: none;
 }
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+}
 header {
   width: 100%;
   background-color: #162B4D;
   height: 96px;
+}
+section {
+  padding: 130px 30px;
+}
+section .section-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .section-wrapper .section-column {
+  width: 50%;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+section .section-wrapper .section-column.column--left {
+  padding-right: 15px;
+}
+section .section-wrapper .section-column.column--right {
+  padding-left: 115px;
+}
+section .section-wrapper .section-column .section-column__text .section-column__title {
+  font-weight: bold;
+  font-size: 36px;
+  color: #162B4D;
+  line-height: 48px;
+  margin-bottom: 30px;
+}
+section .section-wrapper .section-column .section-column__text p {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(22, 43, 77, 0.64);
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+section .section-wrapper .section-column .section-column__text .section-column__subtitle {
+  margin-top: 50px;
+  line-height: 24px;
+  font-size: 16px;
+  color: #58D9A3;
+}
+section .section-wrapper .section-column .section-column__text .mouse-scroll-icon {
+  margin-top: 45px;
+  margin-left: 17px;
+}
+section .section-wrapper .section-column .section-image {
+  width: 100%;
+}
+section.section--lead .section-wrapper .section-column.column--left {
+  padding-right: 15px;
+}
+section.section--lead .section-wrapper .section-column.column--right {
+  padding-left: 15px;
+}
+section.section--lead .section-wrapper .section-column .section-column__text .section-column__title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 64px;
+}
+section.section--lead .section-wrapper .section-column .section-column__text p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 46px;
+}
+section.section--gray {
+  background-color: #F4F5F7;
+}
+section.section--reserve .section-wrapper {
+  flex-direction: row-reverse;
+}
+section.section--reserve .section-wrapper .section-column.column--left {
+  padding: 0 0 0 15px;
+}
+section.section--reserve .section-wrapper .section-column.column--right {
+  padding: 0 115px 0 0;
+}
+button {
+  border-radius: 4px;
+  font-weight: bold;
+  line-height: 24px;
+  font-size: 16px;
+  text-align: center;
+  border: 0;
+  padding: 10px 16px;
+  min-width: 128px;
+}
+button.button-default {
+  background-color: #0065FF;
+  color: white;
+  box-shadow: 0px 24px 24px rgba(0, 101, 255, 0.12);
 }
