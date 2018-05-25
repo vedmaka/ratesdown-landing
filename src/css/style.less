@@ -17,29 +17,72 @@ header {
 
 section {
   padding: 130px 30px;
+
+  @media screen and (max-width: @breakpoint-tablet) {
+    padding: 65px 30px;
+  }
+
+  @media screen and (max-width: @breakpoint-phone) {
+    padding: 45px 20px;
+  }
+
   .section-wrapper {
     max-width: 1140px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: @breakpoint-tablet) {
+      flex-direction: column-reverse;
+      max-width: 100%;
+      margin: 0;
+    }
+
     .section-column {
       width: 50%;
       flex: 1 1 auto;
       box-sizing: border-box;
+
+      @media screen and (max-width: @breakpoint-tablet) {
+        width: auto;
+      }
+
       &.column--left {
         padding-right: 15px;
+
+        @media screen and (max-width: @breakpoint-tablet) {
+          padding-right: 0;
+        }
+
       }
       &.column--right {
         padding-left: 115px;
+
+        @media screen and (max-width: @breakpoint-tablet) {
+          padding-left: 0;
+          margin-bottom: 50px;
+        }
+
       }
       .section-column__text {
+
+        @media screen and (max-width: @breakpoint-tablet) {
+          text-align: center;
+        }
+
         .section-column__title {
           font-weight: bold;
           font-size: 36px;
           color: @headerColor;
           line-height: 48px;
           margin-bottom: 30px;
+
+          @media screen and (max-width: @breakpoint-phone) {
+            font-size: 28px;
+            line-height: 36px;
+          }
+
         }
         p {
           font-size: 16px;
@@ -48,6 +91,17 @@ section {
           color: @textColor;
           line-height: 24px;
           margin-bottom: 30px;
+
+          @media screen and (max-width: @breakpoint-tablet) {
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          @media screen and (max-width: @breakpoint-phone) {
+            max-width: 100%;
+          }
+
         }
         .section-column__subtitle {
           margin-top: 50px;
@@ -58,6 +112,11 @@ section {
         .mouse-scroll-icon {
           margin-top: 45px;
           margin-left: 17px;
+
+          @media screen and (max-width: @breakpoint-tablet) {
+            margin-left: 0;
+          }
+
         }
       }
       .section-image {
@@ -80,11 +139,23 @@ section {
             font-weight: bold;
             font-size: 48px;
             line-height: 64px;
+
+            @media screen and (max-width: @breakpoint-phone) {
+              font-size: 32px;
+              line-height: 40px;
+            }
+
           }
           p {
             font-size: 20px;
             font-weight: 500;
             line-height: 28px;
+
+            @media screen and (max-width: @breakpoint-phone) {
+              font-size: 18px;
+              line-height: 28px;
+            }
+
           }
           button {
             margin-top: 15px;
@@ -98,17 +169,34 @@ section {
     background-color: @sectionBg;
     padding-top: 100px;
     padding-bottom: 100px;
+
+    @media screen and (max-width: @breakpoint-tablet) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
   }
 
   &.section--reserve {
     .section-wrapper {
       flex-direction: row-reverse;
+
+      @media screen and (max-width: @breakpoint-tablet) {
+        flex-direction: column-reverse;
+      }
+
       .section-column {
         &.column--left {
           padding: 0 0 0 15px;
+          @media screen and (max-width: @breakpoint-tablet) {
+            padding: 0;
+          }
         }
         &.column--right {
           padding: 0 115px 0 0;
+          @media screen and (max-width: @breakpoint-tablet) {
+            padding: 0;
+          }
         }
       }
     }
@@ -126,12 +214,19 @@ section {
         color: white;
         font-size: 24px;
         line-height: 34px;
+
+        @media screen and (max-width: @breakpoint-phone) {
+          font-size: 20px;
+          line-height: 28px;
+        }
+
       }
       .section-hero__text {
         font-size: 16px;
         //TODO: this color is generated from opacity in design, c'mon
         color: rgba(255, 255, 255, 0.64);
         line-height: 24px;
+
       }
     }
   }
@@ -140,11 +235,24 @@ section {
     padding-top: 100px;
     padding-bottom: 100px;
     .section-wrapper {
+
+      @media screen and (max-width: @breakpoint-tablet) {
+        flex-direction: column;
+      }
+
       .section-column {
         &.column--left {
 
+          @media screen and (max-width: @breakpoint-tablet) {
+            margin-bottom: 50px;
+          }
+
         }
         &.column--right {
+
+          @media screen and (max-width: @breakpoint-tablet) {
+            margin-bottom: 0;
+          }
 
         }
         .section-column__text {
@@ -155,6 +263,12 @@ section {
             font-weight: bold;
             line-height: 48px;
             margin-bottom: 16px;
+
+            @media screen and (max-width: @breakpoint-phone) {
+              font-size: 24px;
+              line-height: 28px;
+            }
+
           }
           p {
             color: @textColor;
