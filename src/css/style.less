@@ -440,6 +440,49 @@ section {
     }
   }
 
+  &.section--single--column {
+    .section-wrapper {
+      .section-column {
+        text-align: center;
+        .section-column__title {
+          color: @headerBg;
+          margin-bottom: 30px;
+          font-size: 36px;
+          line-height: 48px;
+          font-weight: bold;
+          &.section-column__title--short {
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+        .section-column__text {
+          color: @textColor;
+          margin-bottom: 60px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  &.section--single--column--lead {
+    .section-wrapper {
+      .section-column {
+        .section-column__title {
+          font-size: 48px;
+          line-height: 64px;
+          font-weight: bold;
+        }
+        .section-column__text {
+          line-height: 28px;
+          font-size: 20px;
+          color: @textColor;
+        }
+      }
+    }
+  }
+
 }
 
 footer {
