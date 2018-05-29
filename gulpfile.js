@@ -11,6 +11,11 @@ const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
+const browserify  = require('browserify');
+const babelify = require('babelify');
+const rollup = require('rollup-stream');
+const buffer = require('vinyl-buffer');
+const source = require('vinyl-source-stream');
 
 const paths = {
     src: {
@@ -35,13 +40,21 @@ gulp.task('clean', () => {
 });
 
 gulp.task('js', () => {
-    return gulp.src(paths.src.js)
+
+    return rollup({entry: 'src/js/script.js', format: 'es'})
+        .pipe(source('script.js'))
+        .pipe(buffer())
+        .pipe(babel())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(paths.dist.js));
+
+    /*return gulp.src(paths.src.js)
         .pipe(sourcemaps.init())
         .pipe(babel())
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(paths.dist.js));
+        .pipe(gulp.dest(paths.dist.js));*/
 });
 
 gulp.task('css', () => {

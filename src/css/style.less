@@ -612,17 +612,21 @@ section {
           padding: 0;
           margin: 0;
           text-align: left;
+
           li {
             list-style: none;
             display: block;
             margin-bottom: 16px;
+
+            background-color: @grayBg;
+            padding: 30px;
+            border-radius: 6px;
+
             .faq-header {
               font-size: 20px;
               line-height: 28px;
               color: @headerBg;
-              background-color: @grayBg;
-              padding: 30px;
-              border-radius: 6px;
+
               svg {
                 float: right;
                 width: 8px;
@@ -633,13 +637,24 @@ section {
                 path {
                   fill: #0065FF;
                 }
-
               }
+
             }
+
             .faq-content {
+              margin-top: 20px;
+              line-height: 24px;
               display: none;
             }
+
+            &.faq-open {
+              .faq-content {
+                display: block;
+              }
+            }
+
           }
+
         }
       }
     }

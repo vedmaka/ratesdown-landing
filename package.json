@@ -11,6 +11,8 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-latest": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.2",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
@@ -24,7 +26,10 @@
     "gulp-rename": "^1.2.3",
     "gulp-sequence": "^1.0.0",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "rollup-stream": "^1.24.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "babel": {
     "presets": [
