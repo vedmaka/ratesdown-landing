@@ -666,6 +666,80 @@ section {
     }
   }
 
+  &.section--bg-green {
+    overflow: hidden;
+    position: relative;
+    padding: 130px 0;
+
+    .section-wrapper {
+      position: relative;
+      z-index: 2;
+      padding: 0 30px;
+
+      .section-column {
+
+        position: relative;
+
+        &:before {
+          content: "";
+          width: 445px;
+          height: 445px;
+          background-color: white;
+          position: absolute;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          z-index: 3;
+          bottom: 160px;
+          opacity: 0.12;
+          border-radius: 6px;
+          margin-left: 120px;
+        }
+
+        &:after {
+          content: "";
+          width: 445px;
+          height: 445px;
+          background-color: white;
+          position: absolute;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          z-index: 3;
+          bottom: 160px;
+          opacity: 0.12;
+          border-radius: 6px;
+          margin-right: 120px;
+        }
+
+        .section-column__image {
+          position: relative;
+          z-index: 4;
+        }
+
+      }
+
+    }
+
+    // I don't like this, rework maybe?
+    &:after {
+      content: "";
+      width: 1000px;
+      height: 1000px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      display: block;
+      background-color: #58D9A3;
+      border-radius: 10000px;
+      position: absolute;
+      bottom: -4950px;
+      z-index: 1;
+      transform: scale(10);
+    }
+
+  }
+
 }
 
 footer {
