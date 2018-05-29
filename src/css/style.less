@@ -473,12 +473,26 @@ section {
           font-size: 48px;
           line-height: 64px;
           font-weight: bold;
+
+          @media screen and (max-width: @breakpoint-tablet) {
+            //TODO: ...
+          }
+
         }
         .section-column__text {
           line-height: 28px;
           font-size: 20px;
           color: @textColor;
         }
+
+        .section-column__image {
+          img {
+            @media screen and (max-width: @breakpoint-tablet) {
+              width: 100%;
+            }
+          }
+        }
+
       }
     }
   }
