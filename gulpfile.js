@@ -41,7 +41,7 @@ gulp.task('clean', () => {
 
 gulp.task('js', () => {
 
-    return rollup({entry: 'src/js/script.js', format: 'es'})
+    return rollup({input: 'src/js/script.js', format: 'es'})
         .pipe(source('script.js'))
         .pipe(buffer())
         .pipe(babel())
