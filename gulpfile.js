@@ -20,7 +20,7 @@ const paths = {
         css_full: 'src/css/**/*.less',
         html: 'src/*.html',
         html_full: 'src/**/*.html',
-        images: 'src/images/**.*'
+        images: 'src/images/**/*.*'
     },
     dist: {
         js: 'docs/js/',
