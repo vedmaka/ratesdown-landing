@@ -1086,7 +1086,7 @@ section {
 
   &.section--super--lead {
     background-color: @grayBg;
-    padding: 100px 0;
+    padding: 100px 10px;
     text-align: center;
 
     @media screen and (max-width: @breakpoint-phone) {
@@ -1107,6 +1107,10 @@ section {
           line-height: 48px;
           font-weight: bold;
           color: @headerBg;
+          @media screen and (max-width: @breakpoint-phone) {
+            font-size: 32px;
+            line-height: 44px;
+          }
         }
       }
     }
