@@ -907,6 +907,80 @@ section {
 
   }
 
+  &.section--super--lead {
+    background-color: @grayBg;
+    padding: 100px 0;
+    text-align: center;
+
+    @media screen and (max-width: @breakpoint-phone) {
+      padding-top: 65px;
+      padding-bottom: 65px;
+    }
+
+    .section-wrapper {
+      .section-column {
+        .section-column__subtitle {
+          margin-bottom: 33px;
+          font-size: 16px;
+          color: @textColor;
+          line-height: 24px;
+        }
+        .section-column__title {
+          font-size: 36px;
+          line-height: 48px;
+          font-weight: bold;
+          color: @headerBg;
+        }
+      }
+    }
+  }
+
+  &.section--orange-border {
+    padding-bottom: 0;
+    .section-wrapper {
+      .section-column {
+        &.column--right {
+          border-bottom: 2px solid #FEAC01;
+          margin-left: 34px;
+
+          @media screen and (max-width: @breakpoint-phone) {
+            margin-left: 0;
+          }
+
+          .section-column__text {
+            padding-left: 0;
+            padding-bottom: 130px;
+
+            @media screen and (max-width: @breakpoint-phone) {
+              padding-bottom: 65px;
+            }
+
+          }
+        }
+      }
+    }
+
+  }
+
+  &.section--topic--small {
+    .section-wrapper {
+      .section-column {
+        &.column--right {
+          .section-column__text {
+            font-size: 20px;
+            line-height: 28px;
+            p {
+              color: @headerBg;
+              &:first-child {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
 form {
