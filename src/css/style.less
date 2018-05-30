@@ -24,6 +24,147 @@ header {
   width: 100%;
   background-color: @headerBg;
   height: 96px;
+  box-sizing: border-box;
+  padding: 35px 20px;
+
+  @media screen and (max-width: @breakpoint-mobile-menu) {
+    min-height: 96px;
+    height: auto;
+  }
+
+  .header-wrapper {
+    max-width: 969px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.07px;
+
+    &__menu-section {
+
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        li {
+          list-style: none;
+          a {
+            color: @headerMenuText;
+            text-decoration: none;
+            &.menu-button {
+              font-weight: 500;
+              letter-spacing: 0.07px;
+              background-color: @headerMenuButtonBg;
+              border-radius: 4px;
+              color: @headerMenuButtonText;
+              text-align: center;
+              padding: 12px 13px;
+              &:visited {
+                color: @headerMenuButtonText;
+              }
+            }
+            &:visited {
+              color: @headerMenuText;
+            }
+          }
+        }
+        li + li {
+          margin: 0 0 0 34px;
+        }
+      }
+
+      &__logo {
+        display: block;
+        font-size: 20px;
+        line-height: 28px;
+        font-style: italic;
+        font-weight: 500;
+        color: white;
+        flex: 1 1 auto;
+        margin-right: 30px;
+        svg {
+          position: relative;
+          top: 3px;
+          margin-right: 10px;
+        }
+      }
+      &__menu {
+        margin-right: 30px;
+      }
+
+      &__user {
+
+      }
+
+    }
+
+    .right-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex: 1 1 auto;
+      .header-wrapper__menu-section {
+        flex-shrink: 0;
+      }
+      @media screen and (max-width: @breakpoint-mobile-menu) {
+        display: none;
+      }
+    }
+
+    .mobile-anchor {
+      display: none;
+      svg {
+        transition: transform .25s;
+        path {
+          fill: white;
+        }
+      }
+      @media screen and (max-width: @breakpoint-mobile-menu) {
+        display: block;
+      }
+      &.menu-button--active {
+        svg {
+          transform: rotate(10deg);
+        }
+      }
+    }
+
+  }
+
+  .menu-mobile {
+    display: none;
+    padding-top: 20px;
+    text-align: right;
+    &.menu--open {
+      @media screen and (max-width: @breakpoint-mobile-menu) {
+        display: block;
+        .header-wrapper__menu-section {
+          margin-right: 0;
+          ul {
+            flex-direction: column;
+            li {
+              margin-bottom: 20px;
+            }
+            li + li {
+              margin-left: 0;
+              text-align: right;
+              a {
+                display: block;
+                &.menu-button {
+                  float: right;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
 }
 
 section {

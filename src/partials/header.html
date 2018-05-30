@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>RatesDown</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,700" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet" />
     <link rel="icon" sizes="64x64" href="images/favicon.png">
 
@@ -23,7 +23,66 @@
 <body>
 
 <header>
-    <!-- header here -->
+    <div class="header-wrapper">
+        <a class="header-wrapper__menu-section header-wrapper__menu-section__logo">
+            <img src="images/logo.svg" />
+            Notify
+        </a>
+        <div class="right-menu">
+            <div class="header-wrapper__menu-section header-wrapper__menu-section__menu">
+                <ul>
+                    <li>
+                        <a href="#">Backstory</a>
+                    </li>
+                    <li>
+                        <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-wrapper__menu-section header-wrapper__menu-section__user">
+                <ul>
+                    <li>
+                        <a href="#">Login</a>
+                    </li>
+                    <li>
+                        <a class="menu-button" href="#">Try it free</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mobile-anchor" id="mobile-menu-button">
+            <img src="images/mobile_anchor.svg" />
+        </div>
+    </div>
+    <!-- I don't like this, really, but for now it's easier to duplicate the menu -->
+    <div class="menu-mobile" id="menu-mobile">
+        <div class="header-wrapper__menu-section header-wrapper__menu-section__menu">
+            <ul>
+                <li>
+                    <a href="#">Backstory</a>
+                </li>
+                <li>
+                    <a href="#">Pricing</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-wrapper__menu-section header-wrapper__menu-section__user">
+            <ul>
+                <li>
+                    <a href="#">Login</a>
+                </li>
+                <li>
+                    <a class="menu-button" href="#">Try it free</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </header>
 
 <main>

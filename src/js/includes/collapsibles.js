@@ -1,8 +1,9 @@
 export default class Collapsible {
 
-    constructor(element, toggleClassName = 'open') {
+    constructor(element, toggleClassName = 'open', targetElement = null) {
         this._element = element;
         this._toggleClassName = toggleClassName;
+        this._targetElement = targetElement;
         this._bind();
     }
 
@@ -13,7 +14,11 @@ export default class Collapsible {
 
     _onActivate(event) {
         event.preventDefault();
-        this._element.classList.toggle(this._toggleClassName);
+        let classElement = this._element;
+        if( this._targetElement !== null ) {
+            classElement = this._targetElement;
+        }
+        classElement.classList.toggle(this._toggleClassName);
     }
 
 };

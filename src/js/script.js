@@ -6,3 +6,10 @@ if( collapsibles.length ) {
         new Collapsible(element, 'faq-open');
     }
 }
+
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+if( mobileMenuButton ) {
+    const menuBlock = document.getElementById('menu-mobile');
+    new Collapsible(mobileMenuButton, 'menu--open', menuBlock);
+    new Collapsible(mobileMenuButton, 'menu-button--active');
+}
