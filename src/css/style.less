@@ -1190,6 +1190,54 @@ footer {
   background-color: @footerBg;
   width: 100%;
   height: 96px;
+  .footer-wrapper {
+    box-sizing: border-box;
+    padding: 40px 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__block {
+      color: rgba(255, 255, 255, 0.48);
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: normal;
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        @media screen and (max-width: @breakpoint-phone) {
+          flex-direction: column;
+          min-width: 100px;
+          padding-left: 20px;
+        }
+        li {
+          list-style: none;
+          a {
+            color: white;
+            font-size: 12px;
+            text-align: right;
+            letter-spacing: 0.08px;
+            text-transform: uppercase;
+            text-decoration: none;
+            &:visited {
+              color: white;
+            }
+          }
+          @media screen and (max-width: @breakpoint-phone) {
+            margin-bottom: 10px;
+          }
+        }
+        li + li {
+          margin-left: 20px;
+          @media screen and (max-width: @breakpoint-phone) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 button {
