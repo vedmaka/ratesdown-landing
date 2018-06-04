@@ -1469,7 +1469,6 @@ footer {
             font-size: 12px;
             text-align: right;
             letter-spacing: 0.08px;
-            text-transform: uppercase;
             text-decoration: none;
             &:visited {
               color: #162B4D;
@@ -1486,6 +1485,21 @@ footer {
           }
         }
       }
+
+      &--links {
+        ul {
+          li {
+            a {
+              text-transform: uppercase;
+              font-size: 16px;
+              @media screen and (max-width: @breakpoint-phone) {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+
     }
   }
 }
