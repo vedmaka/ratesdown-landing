@@ -92,9 +92,12 @@
             <div class="section-column__text">
                 These are real world returns, ask any adjuster
             </div>
-            <div class="section-column__image">
+            <div class="section-column__image section-column__image--calculator">
                 <!--<div class="temp-shadow">-->
-                    <img srcset="images/card@2x.png 2x" src="images/card.png">
+                    <!--<img srcset="images/card@2x.png 2x" src="images/card.png" />-->
+                <link rel="stylesheet" href="https://embed.calculoid.com/styles/main.css">
+                <script src="https://embed.calculoid.com/scripts/combined.min.js"></script>
+                <div ng-app="calculoid" ng-controller="CalculoidMainCtrl" ng-init="init({calcId:45234,apiKey:'',showTitle:0,showDescription:0})" ng-include="load()"></div>
                 <!--</div>-->
             </div>
         </div>

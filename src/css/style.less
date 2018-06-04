@@ -1020,7 +1020,7 @@ section {
 
         .section-column__image {
 
-         /*
+          /*
           .temp-shadow {
 
             display: inline-block;
@@ -1052,6 +1052,193 @@ section {
             @media screen and (max-width: @breakpoint-tablet) {
               width: 100%;
             }
+          }
+
+          &.section-column__image--calculator {
+            max-width: 750px;
+            margin: 0 auto;
+            height: 575px;
+            background-color: white;
+            border-radius: 12px;
+            border: 1px solid rgba(22, 43, 77, 0.12);
+            box-sizing: border-box;
+            padding: 0 20px;
+            z-index: 5;
+            position: relative;
+
+            @media screen and (max-width: @breakpoint-tablet) {
+              height: auto;
+            }
+
+            /* Calculoid styles */
+            .calculoid-container {
+
+              font-family: "Montserrat", sans-serif;
+
+              .calculoid-fields {
+                .gridster {
+                  max-height: 575px;
+                  @media screen and (max-width: @breakpoint-tablet) {
+                    max-height: 1200px;
+                  }
+                  .gridster-content {
+
+                    > ul {
+
+                      display: flex;
+                      flex-direction: row;
+                      flex-wrap: wrap;
+                      justify-content: space-between;
+
+                      > li.calculoid-field-item {
+                          border: 1px solid rgba(22, 43, 77, 0.12);
+                          border-radius: 6px;
+                          box-shadow: none;
+                          height: 90px !important;
+                          top: auto !important;
+                          left: auto !important;
+                          position: relative;
+                          margin: 0 0 16px 0 !important;
+
+                          @media screen and (max-width: @breakpoint-tablet) {
+                            width: 49%;
+                          }
+
+                          .calculoid-box {
+                            justify-content: flex-start;
+                            padding: 14px !important;
+                            overflow: visible;
+                            text-align: left;
+                            .calculoid-field-title {
+                              color: rgba(22, 43, 77, 0.65);
+                              font-family: "Montserrat", sans-serif;
+                              font-size: 12px !important;
+                              line-height: 16px !important;
+                              text-align: left;
+                              border: 0;
+                              background-color: transparent;
+                              position: relative;
+                              top: auto;
+                              left: auto;
+                              overflow: visible;
+                              padding: 0;
+                              margin: 0 0 10px 0;
+                              height: 16px;
+                            }
+                          }
+                      }
+
+                      > li.calculoid-field-item:first-child {
+                          height: 184px !important;
+                          margin: 0 0 25px 0 !important;
+                          width: 100% !important;
+                          .calculoid-box {
+                            padding: 30px !important;
+                            .calculoid-field-title {
+                              color: #162B4D;
+                              margin-bottom: 30px;
+                              font-size: 16px !important;
+                              line-height: 24px !important;
+                              height: auto;
+                              font-family: "Montserrat", sans-serif;
+                            }
+                            .calculoid-slider-field {
+                              .slider-input-wrapper {
+                                span {
+                                  display: none;
+                                }
+                              }
+                              .jslider {
+                                table {
+                                  width: 95%;
+                                  margin: 0 auto;
+                                }
+                                .jslider-bg {
+                                  i {
+                                    height: 2px;
+                                    background-color: #01C7E5 !important;
+                                  }
+                                  position: relative;
+                                  &:before {
+                                    content: "";
+                                    width: 6px;
+                                    height: 6px;
+                                    background-color: #0065FF;
+                                    left: -22px;
+                                    position: absolute;
+                                    border-radius: 6px;
+                                    top: -2px;
+                                  }
+                                  &:after {
+                                    content: "";
+                                    width: 6px;
+                                    height: 6px;
+                                    background-color: #0065FF;
+                                    right: -22px;
+                                    position: absolute;
+                                    border-radius: 6px;
+                                    top: -2px;
+                                  }
+                                }
+                                .jslider-pointer {
+                                  width: 44px;
+                                  height: 44px;
+                                  border-width: 8px;
+                                  border-color: white;
+                                  border-radius: 44px;
+                                  box-shadow: none;
+                                  top: -22px;
+                                  margin-left: -18px;
+                                }
+                                .jslider-label {
+                                  top: 25px;
+                                  font-size: 16px;
+                                  line-height: 24px;
+                                  color: rgba(22, 43, 77, 0.48);
+                                  font-family: "Montserrat", sans-serif;
+                                  opacity: 1.0;
+                                }
+                                .jslider-label + .jslider-value {
+                                  display: none;
+                                }
+                                .jslider-value + .jslider-scale {
+
+                                    top: 21px;
+
+                                    span {
+                                      border: 0;
+                                      left: 47% !important;
+                                      ins {
+                                        font-size: 16px;
+                                        line-height: 24px;
+                                        color: rgba(22, 43, 77, 1);
+                                        font-family: "Montserrat", sans-serif;
+                                        opacity: 1.0;
+                                      }
+                                    }
+
+                                }
+                                .jslider-pointer + .jslider-label {
+                                  left: -10px;
+                                }
+                                .jslider-label + .jslider-label {
+                                  right: -10px;
+                                }
+                              }
+                            }
+                          }
+                      }
+
+                    }
+                  }
+                }
+
+              }
+              .calculoid-clearfix + div[ng-if="calc.signature"] {
+                display: none;
+              }
+            }
+
           }
 
         }
