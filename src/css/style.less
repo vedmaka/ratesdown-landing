@@ -22,10 +22,11 @@ main {
 
 header {
   width: 100%;
-  background-color: @headerBg;
+  background-color: #FEFEFE;
   height: 96px;
   box-sizing: border-box;
   padding: 35px 20px;
+  box-shadow: inset 0 -1px 0 rgba(22, 43, 77, 0.1);
 
   @media screen and (max-width: @breakpoint-mobile-menu) {
     min-height: 96px;
@@ -57,22 +58,35 @@ header {
         li {
           list-style: none;
           a {
-            color: @headerMenuText;
+            color: #162B4D;
             text-decoration: none;
             &.menu-button {
               font-weight: 500;
               letter-spacing: 0.07px;
-              background-color: @headerMenuButtonBg;
+              background-color: #0065FF;
               border-radius: 4px;
-              color: @headerMenuButtonText;
+              color: white;
               text-align: center;
               padding: 12px 13px;
+              box-shadow: 0 14px 24px rgba(0, 101, 255, 0.12);
+              &:hover {
+                background-color: @buttonColorHover;
+              }
+              &:active {
+                color: white;
+              }
               &:visited {
-                color: @headerMenuButtonText;
+                color: white;
               }
             }
             &:visited {
-              color: @headerMenuText;
+              color: #162B4D;
+            }
+            &.pale {
+              color: rgba(22, 43, 77, 0.64);
+              &:visited {
+                color: rgba(22, 43, 77, 0.64);
+              }
             }
           }
         }
@@ -87,10 +101,11 @@ header {
         line-height: 28px;
         font-style: italic;
         font-weight: 500;
-        color: white;
+        color: #162B4D;
         flex: 1 1 auto;
-        margin-right: 30px;
+        margin-right: 20px;
         text-decoration: none;
+        font-family: "Roboto", sans-serif;
         svg {
           position: relative;
           top: 3px;
@@ -184,7 +199,7 @@ header {
       svg {
         transition: transform .25s;
         path {
-          fill: white;
+          fill: @headerBg;
         }
       }
 
