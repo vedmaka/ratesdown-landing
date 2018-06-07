@@ -263,7 +263,10 @@ section {
       }
       &.column--right {
         padding-left: 115px;
-
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         @media screen and (max-width: @breakpoint-tablet) {
           padding-left: 0;
           margin-bottom: 50px;
@@ -274,6 +277,16 @@ section {
 
         @media screen and (max-width: @breakpoint-tablet) {
           text-align: center;
+        }
+
+        .section-column__up-title {
+          font-size: 18px;
+          line-height: 42px;
+          font-weight: 500;
+          color: @headerColor;
+          border-bottom: 2px solid @orangeColor;
+          margin-bottom: 20px;
+          display: inline-block;
         }
 
         .section-column__title {
@@ -417,15 +430,19 @@ section {
   &.section--hero {
     // TODO: layers filters are used in design to overlay pattern over a color
     background: #58D9A3; /* url("../images/bg-hero.png") center center no-repeat; */
-    padding-top: 70px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+
     .section-wrapper {
       flex-direction: column;
       text-align: center;
+
       .section-hero__title {
         font-weight: bold;
         color: white;
         font-size: 24px;
         line-height: 34px;
+        margin-bottom: 10px;
 
         @media screen and (max-width: @breakpoint-phone) {
           font-size: 20px;
@@ -433,13 +450,22 @@ section {
         }
 
       }
+
       .section-hero__text {
         font-size: 16px;
         //TODO: this color is generated from opacity in design, c'mon
-        color: @whiteTextColor;
-        line-height: 24px;
-
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 28px;
+        font-weight: normal;
       }
+
+      .section-hero__image {
+        margin-bottom: 10px;
+        img {
+          max-width: 190px;
+        }
+      }
+
     }
   }
 
@@ -1304,7 +1330,7 @@ section {
     .section-wrapper {
       .section-column {
         &.column--right {
-          border-bottom: 2px solid #FEAC01;
+          border-bottom: 2px solid @orangeColor;
           margin-left: 34px;
 
           @media screen and (max-width: @breakpoint-phone) {
@@ -1350,6 +1376,7 @@ section {
     background-color: #448AFF;
     padding-top: 100px;
     padding-bottom: 100px;
+    box-sizing: border-box;
     .section-wrapper {
       text-align: center;
       max-width: 945px;
@@ -1360,6 +1387,56 @@ section {
         line-height: 34px;
         font-weight: bold;
       }
+    }
+  }
+
+  &.section--full-image {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    img {
+      width: 100%;
+    }
+  }
+
+  &.section--outsize-image {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .section-wrapper {
+      .section-column {
+        &.column--left {
+          padding-right: 25px;
+        }
+        &.column--right {
+          padding-left: 0;
+          img.section-image {
+            position: relative;
+            top: 60px;
+            left: 50px;
+          }
+        }
+      }
+    }
+
+    &.section--reserve {
+
+      .section-wrapper {
+        .section-column {
+          &.column--left {
+            padding-left: 25px;
+          }
+          &.column--right {
+            padding-right: 0;
+            img.section-image {
+              position: relative;
+              top: 50px;
+              left: -50px;
+            }
+          }
+        }
+      }
+
     }
   }
 
