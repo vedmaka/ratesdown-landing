@@ -1037,34 +1037,6 @@ section {
 
         .section-column__image {
 
-          /*
-          .temp-shadow {
-
-            display: inline-block;
-            position: relative;
-            z-index: 4;
-
-            &:after {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              background-color: black;
-              opacity: 0.6;
-              color: white;
-              font-weight: bold;
-              text-align: center;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              content: "Coming soon..";
-              top: 0;
-              left: 0;
-              z-index: 5;
-              border-radius: 6px;
-            }
-
-          }*/
-
           img {
             @media screen and (max-width: @breakpoint-tablet) {
               width: 100%;
@@ -1216,7 +1188,14 @@ section {
                                   opacity: 1.0;
                                 }
                                 .jslider-label + .jslider-value {
-                                  display: none;
+                                  // display: none;
+                                  top: -45px;
+                                  font-size: 16px;
+                                  line-height: 24px;
+                                  font-weight: 500;
+                                  color: #162B4D;
+                                  font-family: "Montserrat", sans-serif;
+                                  padding-left: 8px;
                                 }
                                 .jslider-value + .jslider-scale {
 
