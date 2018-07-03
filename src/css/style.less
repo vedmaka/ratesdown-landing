@@ -1354,11 +1354,12 @@ section {
           font-size: 16px;
           color: @textColor;
           line-height: 24px;
+          font-weight: 500;
         }
         .section-column__title {
           font-size: 36px;
           line-height: 48px;
-          font-weight: bold;
+          font-weight: normal;
           color: @headerBg;
           @media screen and (max-width: @breakpoint-phone) {
             font-size: 32px;
@@ -1374,7 +1375,7 @@ section {
     .section-wrapper {
       .section-column {
         &.column--right {
-          border-bottom: 2px solid @orangeColor;
+          border-bottom: 1px solid lightgray;
           margin-left: 34px;
 
           @media screen and (max-width: @breakpoint-phone) {
