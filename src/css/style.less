@@ -2,7 +2,7 @@
 @import 'includes/variables.less';
 
 html, body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: white;
   min-height: 100%;
   height: 100%;
@@ -25,7 +25,7 @@ header {
   background-color: #FEFEFE;
   height: 96px;
   box-sizing: border-box;
-  padding: 35px 20px;
+  padding: 38px 20px;
   box-shadow: inset 0 -1px 0 rgba(22, 43, 77, 0.1);
 
   @media screen and (max-width: @breakpoint-mobile-menu) {
@@ -34,7 +34,7 @@ header {
   }
 
   .header-wrapper {
-    max-width: 969px;
+    max-width: 1140px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -58,36 +58,46 @@ header {
         li {
           list-style: none;
           a {
+
             color: #162B4D;
             text-decoration: none;
-            &.menu-button {
-              font-weight: 500;
-              letter-spacing: 0.07px;
-              background-color: #0065FF;
-              border-radius: 4px;
-              color: white;
-              text-align: center;
-              padding: 12px 13px;
-              box-shadow: 0 14px 24px rgba(0, 101, 255, 0.12);
-              &:hover {
-                background-color: @buttonColorHover;
-              }
-              &:active {
-                color: white;
-              }
-              &:visited {
-                color: white;
-              }
-            }
+
             &:visited {
               color: #162B4D;
             }
+
             &.pale {
               color: rgba(22, 43, 77, 0.64);
               &:visited {
                 color: rgba(22, 43, 77, 0.64);
               }
             }
+
+            &.menu-button {
+              /*font-weight: 500;
+              letter-spacing: 0.07px;
+              background-color: #81C784;
+              border-radius: 4px;
+              color: white;
+              text-align: center;
+              padding: 12px 13px;
+              box-shadow: 0 14px 24px rgba(0, 101, 255, 0.12);
+              &:hover {
+                background-color: #81C784;
+              }*/
+              color: white;
+              position: relative;
+              top: -13px;
+              &:active {
+                color: white;
+              }
+
+              &:visited {
+                color: white;
+              }
+
+            }
+
           }
         }
         li + li {
@@ -101,26 +111,41 @@ header {
         line-height: 28px;
         font-style: italic;
         font-weight: 500;
-        color: #162B4D;
+        color: #014BA0;
         flex: 1 1 auto;
         margin-right: 20px;
         text-decoration: none;
         font-family: "Roboto", sans-serif;
+        position: relative;
+        top: -22px;
         svg {
           position: relative;
-          top: 3px;
+          top: 10px;
           margin-right: 10px;
+          width: 41px;
+          height: 37px;
         }
         @media screen and (max-width: @breakpoint-mobile-menu) {
           align-self: flex-start;
         }
       }
       &__menu {
-        margin-right: 30px;
+        /*margin-right: 30px;*/
       }
 
       &__user {
-
+        ul {
+          li {
+            a {
+              &.pale {
+                color: #81C784;
+                &:visited {
+                  color: #81C784;
+                }
+              }
+            }
+          }
+        }
       }
 
     }
@@ -281,18 +306,18 @@ section {
 
         .section-column__up-title {
           font-size: 18px;
-          line-height: 42px;
+          line-height: 20px;
           font-weight: 500;
-          color: @headerColor;
-          border-bottom: 2px solid @orangeColor;
-          margin-bottom: 20px;
+          color: #000000;
+          border-bottom: 1px solid #80C583;
+          margin-bottom: 15px;
           display: inline-block;
         }
 
         .section-column__title {
-          font-weight: bold;
+          font-weight: normal;
           font-size: 36px;
-          color: @headerColor;
+          color: #000000;
           line-height: 48px;
           margin-bottom: 30px;
 
@@ -306,7 +331,7 @@ section {
           font-size: 16px;
           font-weight: 400;
           // TODO: in design this color is defined via opacity applied to original text color
-          color: @textColor;
+          color: rgba(0, 0, 0, 0.64); //@textColor;
           line-height: 24px;
           margin-bottom: 30px;
 
@@ -329,8 +354,9 @@ section {
           margin-top: 50px;
           line-height: 24px;
           font-size: 16px;
-          color: @subtitleColor;
+          color: black;
         }
+
         .mouse-scroll-icon {
           margin-top: 45px;
           margin-left: 17px;
@@ -347,9 +373,18 @@ section {
     }
   }
 
+  .section-column__subtitle2 {
+    font-weight: normal;
+    line-height: 24px;
+    font-size: 14px;
+    color: #5B5B5B;
+    max-width: 1140px;
+    margin: 100px auto 0 auto;
+  }
+
   &.section--lead {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
     .section-wrapper {
       .section-column {
         &.column--left {
@@ -360,9 +395,10 @@ section {
         }
         .section-column__text {
           .section-column__title {
-            font-weight: bold;
+            font-weight: normal;
             font-size: 48px;
             line-height: 64px;
+            max-width: 490px;
 
             @media screen and (max-width: @breakpoint-phone) {
               font-size: 32px;
@@ -429,7 +465,7 @@ section {
 
   &.section--hero {
     // TODO: layers filters are used in design to overlay pattern over a color
-    background: #58D9A3; /* url("../images/bg-hero.png") center center no-repeat; */
+    background: #81C784; /* url("../images/bg-hero.png") center center no-repeat; */
     padding-top: 90px;
     padding-bottom: 90px;
 
@@ -438,7 +474,7 @@ section {
       text-align: center;
 
       .section-hero__title {
-        font-weight: bold;
+        font-weight: normal;
         color: white;
         font-size: 24px;
         line-height: 34px;
@@ -498,7 +534,7 @@ section {
           .section-column__title {
             color: @headerColor;
             font-size: 36px;
-            font-weight: bold;
+            font-weight: normal;
             line-height: 48px;
             margin-bottom: 16px;
 
@@ -1401,7 +1437,7 @@ section {
 
   &.section--outsize-image {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 120px;
 
     .section-wrapper {
       .section-column {
@@ -1413,7 +1449,8 @@ section {
           img.section-image {
             position: relative;
             top: 60px;
-            left: 50px;
+            left: 30px;
+            max-width: 455px;
           }
         }
       }
@@ -1431,7 +1468,7 @@ section {
             img.section-image {
               position: relative;
               top: 50px;
-              left: -50px;
+              left: -30px;
             }
           }
         }
@@ -1588,28 +1625,46 @@ button {
   padding: 10px 16px;
   min-width: 128px;
   border: 1px solid transparent;
+}
 
-  &.button-default {
-    background-color: @buttonColor;
-    border-color: @buttonColor;
+.button {
+  border-radius: 4px;
+  font-weight: bold;
+  line-height: 24px;
+  font-size: 16px;
+  text-align: center;
+  padding: 9px 16px;
+  min-width: 128px;
+  border: 1px solid transparent;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.button-default {
+  background-color: #81C784;
+  border-color: #81C784;
+  color: @buttonText;
+  box-shadow: -1px 11px 20px rgba(106, 107, 109, 0.12);
+  &:hover {
+    background-color: #81C784;
+  }
+  &:visited {
     color: @buttonText;
-    box-shadow: 0 24px 24px rgba(0, 101, 255, 0.12);
-    &:hover {
-      background-color: @buttonColorHover;
-    }
   }
+}
 
-  &.button-light {
-    background-color: white;
-    border: 1px solid rgba(120, 144, 156, 0.24);
+.button-light {
+  background-color: white;
+  border: 1px solid rgba(120, 144, 156, 0.24);
+  color: @headerBg;
+  &:hover {
+
+  }
+  &:visited {
     color: @headerBg;
-    &:hover {
-
-    }
   }
+}
 
-  &.button-offer {
-    width: 100%;
-  }
-
+.button-offer {
+  width: 100%;
 }
